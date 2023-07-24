@@ -9,7 +9,8 @@ class Main(commands.Bot):
 
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
-        await bot.change_presence(activity=discord.Game(name="MGE server on Team Fortress 2"))
+        #if desired you can uncomment this line in order to display activity status on your discord bot page
+        #await bot.change_presence(activity=discord.Game(name="MGE server on Team Fortress 2"))
 
     async def setup_hook(self):
         #await self.wait_until_ready()
@@ -32,7 +33,7 @@ class Main(commands.Bot):
                 data = await curs.fetchone()
                 exp = data[0]
                 lvl = math.sqrt(exp) / 2
-                print(lvl)
+                #print(lvl)
 
                 if lvl.is_integer():
                     await message.channel.send(f"Good job <@{message.author.id}>! You are now have level {int(lvl)}")
@@ -50,7 +51,7 @@ class Main(commands.Bot):
         async def stat(ctx):
             progress = (lvl - int(lvl)) / 1 * 100
             await ctx.send(f"current lvl of user <@{ctx.author.id}> is {int(lvl)} progress to the next level is: {int(progress)}%")
-            print (progress)
+            #print (progress)
 
         @self.command(name='leaderboard')
         async def leaderboard(ctx):
