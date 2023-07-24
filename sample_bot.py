@@ -46,9 +46,11 @@ class Main(commands.Bot):
         async def test(ctx):
             await ctx.send("ebi kashtan 16 na 9")
 
-        @self.command(name='mystat')
-        async def mystat(ctx):
-            await ctx.send(f"current lvl of user <@{ctx.author.id}> is {int(lvl)}")
+        @self.command(name='stat')
+        async def stat(ctx):
+            progress = (lvl - int(lvl)) / 1 * 100
+            await ctx.send(f"current lvl of user <@{ctx.author.id}> is {int(lvl)} progress to the next level is: {int(progress)}%")
+            print (progress)
 
         @self.command(name='leaderboard')
         async def leaderboard(ctx):
@@ -58,7 +60,8 @@ class Main(commands.Bot):
                                           , (ctx.guild.id, ))
             for users in await userdb.fetchall():
                 i += 1
-                await ctx.send(f"{i} place:<@{users[1]}>")
+                print(users[2])
+                await ctx.send(f"{i} place:<@{users[1]}> with level {int(math.sqrt(users[2]) / 2)}")
 
 
 
@@ -70,7 +73,7 @@ class Main(commands.Bot):
 
 
 bot = Main()
-bot.run('')
+bot.run('MTEzMTUwOTE5NTI2NzY0OTU3OA.GDJBwk.bY1baEhrovxdkYK7a9p36KDuEVqtV49rJZEhcU')
 
 
 
