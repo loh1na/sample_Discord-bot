@@ -73,7 +73,7 @@ class Main(commands.Bot):
 
 
 bot = Main()
-bot.run('MTEzMTUwOTE5NTI2NzY0OTU3OA.GDJBwk.bY1baEhrovxdkYK7a9p36KDuEVqtV49rJZEhcU')
+bot.run('YOUR_TOKEN_HERE')
 
 
 
