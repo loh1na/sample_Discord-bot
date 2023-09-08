@@ -85,7 +85,7 @@ class Main(commands.Bot):
 
 
 bot = Main()
-bot.run('MTEzMTUwOTE5NTI2NzY0OTU3OA.Gg9maT.p-Yus1e1wmCPlqVc5mo53WU3oeWCL3YxF3baI0')
+bot.run('token')
 
 
 
