@@ -71,10 +71,10 @@ class Main(commands.Bot):
         async def say(ctx, *said):
             await ctx.send("".join(said))
 
-        @self.command(name='pingminecraft')
-        async def pingminecraft(ctx):
-            Role = discord.utils.get(ctx.server.roles, name="ping-minecraft")
-            await ctx.add_roles(Role)
+        #@self.command(name='pingminecraft')
+        #async def pingminecraft(ctx):
+            #Role = discord.utils.get(ctx.server.roles, name="ping-minecraft")
+            #await ctx.add_roles(Role)
 
 
 
